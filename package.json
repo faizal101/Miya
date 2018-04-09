@@ -1,0 +1,23 @@
+{
+  "name": "thatbot",
+  "version": "0.0.1",
+  "description": "That Bot but written in JS",
+  "main": "ThatBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kuuhaku",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizal101/ThatBotJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/faizal101/ThatBotJS/issues"
+  },
+  "homepage": "https://github.com/faizal101/ThatBotJS#readme"
+}
