@@ -4,12 +4,13 @@
   "description": "That Bot but written in JS",
   "main": "ThatBot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ThatBot.js"
   },
   "author": "kuuhaku",
   "license": "MIT",
   "dependencies": {
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "discord.js-commando": "github:discordjs/Commando#11.2"
   },
   "devDependencies": {},
   "repository": {
