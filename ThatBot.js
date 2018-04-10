@@ -12,7 +12,7 @@ const bot = new Commando.Client({
 
 bot.registry
     .registerGroups([
-        ['misc', 'Miscellanous, where commands don`t have a place to go']
+        ['misc', 'Miscellanous, where commands don\'t have a place to go']
     ])
     .registerDefaultGroups()
 		.registerDefaultTypes()
