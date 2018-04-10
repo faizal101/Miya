@@ -1,13 +1,13 @@
-const { Command } = require('discord.js-commando');
+const { Command } = require("discord.js-commando");
 
 module.exports = class ReplyCommand extends Command {
     constructor(client) {
         super(client, {
-            name: 'say',
-            group: 'misc',
-            memberName: 'say',
-            description: 'I say what you\'ll say',
-            examples: ['say hey!'],
+            name: "say",
+            group: "misc",
+            memberName: "say",
+            description: "I say what you'll say",
+            examples: ["say hey!"],
             args : [
               {
                 key: "text",
