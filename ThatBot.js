@@ -22,7 +22,8 @@ const bot = new Commando.Client({
 bot.registry
     .registerGroups([
         ["misc", "Miscellanous, where commands don't have a place to go"],
-        ["random", "Random, where all the rng happens "]
+        ["random", "Random, where all the rng happens "],
+        ["meta", "Meta and Information commands are found here "]
     ])
     .registerDefaultGroups()
 		.registerDefaultTypes()
