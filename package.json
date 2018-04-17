@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "discord.js-commando": "github:discordjs/Commando#11.2"
+    "discord.js-commando": "github:faizal101/Commando#11.2"
   },
   "devDependencies": {},
   "repository": {
