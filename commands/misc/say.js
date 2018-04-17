@@ -8,7 +8,7 @@ module.exports = class ReplyCommand extends Command {
             memberName: "say",
             description: "I say what you'll say",
             examples: ["say hey!"],
-            args : [
+            args: [
               {
                 key: "text",
                 prompt: "You need to type something for me to say the same thing",
