@@ -13,5 +13,5 @@ module.exports = class ReplyCommand extends Command {
 
     run(msg) {
         return msg.say("Hello world!");
-    }
+    };
 };
