@@ -19,7 +19,7 @@ module.exports = class ReplyCommand extends Command {
     }
 
     run(msg) {
-      const headpat = Math.floor(Math.random() * headpats.length) + 1 //check if this gets all file
+      const headpat = Math.floor(Math.random() * headpats.length) + 1
       msg.channel.send({
         files: [{
           attachment: `${config.headpatPath}${headpats[headpat]}`,
