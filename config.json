@@ -1,4 +1,7 @@
 {
-  "token": " ",
-  "prefix": "?"
+  "token": "",
+  "prefix": ".",
+  "smugPath": "/Users/Faizal/Documents/GitHub/ThatBot/smug/",
+  "headpatPath":"/Users/Faizal/Documents/GitHub/ThatBot/headpats/",
+  "bestgrilPath":"/Users/Faizal/Documents/GitHub/ThatBot/bestgril/"
 }

@@ -16,5 +16,5 @@ module.exports = class ReplyCommand extends Command {
         return (Math.floor(Math.random() * 2) === 0) ? "heads" : "tails";
       }
       msg.say(coin())
-    }
+    };
 };
