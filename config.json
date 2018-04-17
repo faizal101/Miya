@@ -1,7 +1,8 @@
 {
   "token": "",
   "prefix": ".",
-  "smugPath": "/Users/Faizal/Documents/GitHub/ThatBot/smug/",
-  "headpatPath":"/Users/Faizal/Documents/GitHub/ThatBot/headpats/",
-  "bestgrilPath":"/Users/Faizal/Documents/GitHub/ThatBot/bestgril/"
+  "smugPath": "/Users/Documents/ThatBot/smug/",
+  "headpatPath": "/Users/Documents/ThatBot/headpats/",
+  "bestgrilPath": "/Users/Documents/ThatBot/bestgril/",
+  "yayPath": "/Users/Documents/ThatBot/yay/"
 }
