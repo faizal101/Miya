@@ -42,3 +42,5 @@ bot.on("ready", () => {
 });
 
 bot.login(config.token)
+
+//TODO MTG command, configurable server specific prefix, booru command
