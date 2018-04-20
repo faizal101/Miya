@@ -18,7 +18,7 @@ module.exports = class StatsCommand extends Command {
 
     embed
       .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL())
-      .setColor('#0e2f44')
+      .setColor('#ec40df')
       .setFooter(`Requested by: ${msg.author.tag}`, msg.author.displayAvatarURL())
       .setTimestamp()
       .addField('Info', stripIndents`This bot is in ${this.client.guilds.size} guilds
