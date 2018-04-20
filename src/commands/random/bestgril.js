@@ -18,7 +18,7 @@ const grilinfo = [
   'Megumin from Kono Subarashii Sekai ni Shukufuku wo!'
 ];
 
-module.exports = class ReplyCommand extends Command {
+module.exports = class BestgrilCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'bestgril',

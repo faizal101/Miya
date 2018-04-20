@@ -12,7 +12,7 @@ const eightBallStrings = [
   'Outlook not so good', 'Very doubtful'
 ];
 
-module.exports = class ReplyCommand extends Command {
+module.exports = class EightballCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'eightball',

@@ -2,7 +2,7 @@ const fs = require('fs'),
   path = require('path'),
   {Command} = require('discord.js-commando');
 
-module.exports = class ReplyCommand extends Command {
+module.exports = class HeadpatCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'headpat',

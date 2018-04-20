@@ -22,7 +22,7 @@ module.exports = class StatsCommand extends Command {
       .setColor('#0e2f44')
       .setFooter(`Requested by: ${msg.author.tag}`, msg.author.displayAvatarURL())
       .setTimestamp()
-      .addField('Info: ', stripIndents`This bot is in ${this.client.guilds.size} guilds
+      .addField('Info', stripIndents`This bot is in ${this.client.guilds.size} guilds
       Coded in discord.js
       A bot made for fun by ${this.client.owners[0].tag}`)
       .addField('GitHub', 'Check out my code on [GitHub!](https://github.com/faizal101/ThatBotJS)');

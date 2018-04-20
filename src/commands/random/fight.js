@@ -15,7 +15,7 @@ const fightStrings = [
   ', while shouting out a move as if they\'re a main character from an anime.', ', but gave up halfway.'
 ];
 
-module.exports = class ReplyCommand extends Command {
+module.exports = class FightCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'fight',
