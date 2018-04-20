@@ -13,8 +13,7 @@ module.exports = class YayCommand extends Command {
   }
 
   run (msg) {
-    // const yay = Math.floor(Math.random() * 26) + 1;
-    const yay = 1;
+    const yay = Math.floor(Math.random() * 26) + 1;
 
     msg.channel.send({
       files: [
