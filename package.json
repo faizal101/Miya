@@ -1,24 +1,30 @@
 {
-  "name": "thatbot",
-  "version": "0.0.1",
-  "description": "That Bot but written in JS",
-  "main": "ThatBot.js",
-  "scripts": {
-    "start": "node ThatBot.js"
-  },
-  "author": "kuuhaku",
-  "license": "MIT",
-  "dependencies": {
-    "discord.js": "github:Favna/discord.js#main",
-    "discord.js-commando": "github:faizal101/Commando"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/faizal101/ThatBotJS.git"
-  },
-  "bugs": {
-    "url": "https://github.com/faizal101/ThatBotJS/issues"
-  },
-  "homepage": "https://github.com/faizal101/ThatBotJS#readme"
+    "name": "thatbot",
+    "version": "0.1.0",
+    "description": "That Bot but written in JS",
+    "main": "src/ThatBot.js",
+    "scripts": {
+        "start": "node src/ThatBot.js",
+        "lint": "./node_modules/.bin/eslint src/commands/**/*.js",
+        "lintfix": "./node_modules/.bin/eslint --fix src/commands/**/*.js"
+    },
+    "author": "kuuhaku",
+    "license": "MIT",
+    "dependencies": {
+        "common-tags": "^1.7.2",
+        "discord.js": "github:Favna/discord.js#main",
+        "discord.js-commando": "github:faizal101/Commando",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "eslint": "^4.19.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/faizal101/ThatBotJS.git"
+    },
+    "bugs": {
+        "url": "https://github.com/faizal101/ThatBotJS/issues"
+    },
+    "homepage": "https://github.com/faizal101/ThatBotJS#readme"
 }
