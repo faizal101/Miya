@@ -22,7 +22,7 @@ module.exports = class BestgrilCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'bestgril',
-      aliases ['bestgirl'],
+      aliases: ['bestgirl'],
       group: 'random',
       memberName: 'bestgril',
       description: 'posts the best girl from an anime',
