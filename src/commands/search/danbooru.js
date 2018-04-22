@@ -6,10 +6,11 @@ module.exports = class DanCommand extends Command {
   constructor(client) {
     super(client, {
       name: "danbooru",
+      aliases: ['db', 'dan'],
       group: "search",
       memberName: "danbooru",
       description: "search for anime pics on danbooru",
-      examples: ["danbooru kantoku"],
+      examples: ["danbooru kyuri"],
       args: [
         {
           key: "search",
@@ -24,8 +25,6 @@ module.exports = class DanCommand extends Command {
     const booru = new Danbooru();
     const posts = await booru.posts({ tags: search, limit: 5, random:true });
     const post = posts[0];
-    console.log(post.file_url)
-    console.log(post.large_file_url);
     embed
       .setAuthor("Danbooru", "https://qt-anime-grils.is-serious.business/555270.png")
       .setColor("#ec40df")

@@ -6,6 +6,7 @@ module.exports = class HeadpatCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'headpat',
+      aliases: ['pat'],
       group: 'random',
       memberName: 'headpat',
       description: 'headpats will solve everything',

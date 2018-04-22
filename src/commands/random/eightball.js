@@ -17,7 +17,7 @@ module.exports = class EightballCommand extends Command {
     super(client, {
       name: 'eightball',
       group: 'random',
-      aliases: ['8ball'],
+      aliases: ['8ball', 'eight', 'ball'],
       memberName: 'eightball',
       description: 'The magic ball knows the answer to everything',
       examples: ['8ball'],

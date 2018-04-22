@@ -7,7 +7,7 @@ module.exports = class SmugCommand extends Command {
       name: 'smug',
       group: 'random',
       memberName: 'smug',
-      description: 'posts an anime smug',
+      description: 'posts a random anime smug',
       examples: ['smug']
     });
   }
