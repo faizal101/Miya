@@ -23,5 +23,5 @@ yarn.lock
 # vscode workspace settings
 .vscode/
 
-# ignote sqlite databases
+# ignore sqlite databases
 *.sqlite3
