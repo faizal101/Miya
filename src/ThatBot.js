@@ -24,7 +24,8 @@ bot.registry
   .registerGroups([
     ['misc'],
     ['random'],
-    ['meta']
+    ['meta'],
+    ['search']
   ])
   .registerDefaultGroups()
   .registerDefaultTypes()
