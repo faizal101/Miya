@@ -1,7 +1,7 @@
 const path = require('path');
 const config = require(path.join(__dirname, 'config.json'));
 const Commando = require('discord.js-commando');
-// const sqlite = require('sqlite');
+const sqlite = require('sqlite');
 
 const bot = new Commando.Client({
   'commandPrefix': config.prefix,
@@ -11,14 +11,9 @@ const bot = new Commando.Client({
   'selfbot': false
 });
 
-/**
- * This does not have utmost priority but you'll want it eventually as it stores the guild and global settings
- */
-/*
-  client.setProvider(
+bot.setProvider(
   sqlite.open(path.join(__dirname, 'settings.sqlite3')).then(db => new Commando.SQLiteProvider(db))
  ).catch(console.error);
- */
 
 bot.registry
   .registerGroups([
@@ -45,4 +40,4 @@ bot.on('ready', () => {
 
 bot.login(config.token);
 
-// TODO MTG command, configurable server specific prefix, booru command
+// TODO MTG command, music playback, avatar
