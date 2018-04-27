@@ -13,14 +13,15 @@ const bot = new Commando.Client({
 
 bot.setProvider(
   sqlite.open(path.join(__dirname, 'settings.sqlite3')).then(db => new Commando.SQLiteProvider(db))
- ).catch(console.error);
+).catch(console.error);
 
 bot.registry
   .registerGroups([
     ['misc'],
     ['random'],
     ['meta'],
-    ['search']
+    ['search'],
+    ['music']
   ])
   .registerDefaultGroups()
   .registerDefaultTypes()
