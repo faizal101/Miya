@@ -11,6 +11,7 @@
     "author": "kuuhaku",
     "license": "MIT",
     "dependencies": {
+        "better-sqlite3": "~4.0.2",
         "common-tags": "^1.7.2",
         "danbooru": "^3.0.7",
         "discord.js": "Favna/discord.js#main",
@@ -18,7 +19,6 @@
         "dotenv": "^5.0.1",
         "node-opus": "^0.2.7",
         "path": "^0.12.7",
-        "sqlite": "^2.9.1",
         "ytdl-core": "^0.20.2"
     },
     "devDependencies": {

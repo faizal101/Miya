@@ -1,6 +1,6 @@
+const Database = require('better-sqlite3');
+const {Client, SyncSQLiteProvider} = require('discord.js-commando');
 const path = require('path');
-const Commando = require('discord.js-commando');
-const sqlite = require('sqlite');
 
 require('dotenv').config({path: path.join(__dirname, '.env')});
 
@@ -12,9 +12,11 @@ const bot = new Client({
   'selfbot': false
 });
 
+const db = new Database(path.join(__dirname, 'settings.sqlite3'));
+
 bot.setProvider(
-  sqlite.open(path.join(__dirname, 'settings.sqlite3')).then(db => new Commando.SQLiteProvider(db))
-).catch(console.error);
+  new SyncSQLiteProvider(db)
+);
 
 bot.registry
   .registerGroups([
