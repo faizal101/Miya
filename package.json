@@ -17,9 +17,12 @@
         "discord.js": "Favna/discord.js#main",
         "discord.js-commando": "faizal101/Commando#thatbot",
         "dotenv": "^5.0.1",
+        "erlpack": "discordapp/erlpack",
         "node-opus": "^0.2.7",
         "path": "^0.12.7",
-        "ytdl-core": "^0.20.2"
+        "uws": "^9.148.0",
+        "ytdl-core": "^0.20.2",
+        "zlib-sync": "^0.1.4"
     },
     "devDependencies": {
         "eslint": "^4.19.1"
