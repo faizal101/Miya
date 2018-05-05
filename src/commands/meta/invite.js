@@ -18,8 +18,9 @@ module.exports = class InviteCommand extends Command {
 
     embed
       .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL())
-      .setColor("#ec40df")
-      .addField("Invite Link:", "[Invite me to your server!](https://discordapp.com/api/oauth2/authorize?client_id=284399078165708802&permissions=1141230657&scope=bot)")
+      .setColor('#ec40df')
+      .addField('Invite Link:', '[Invite me to your server!](https://discordapp.com/api/oauth2/authorize?client_id=284399078165708802&permissions=1141230657&scope=bot)');
+    
     return msg.embed(embed);
   }
 };

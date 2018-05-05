@@ -18,25 +18,28 @@ module.exports = class PlayCommand extends Command {
       ]
     });
   }
+
   // TODO: add a queue
   async run (msg, {moosic}) {
-    var voiceChannel = msg.member.voiceChannel;
-    let nqrse = 'https://youtu.be/UNRUFN6Be2w';
-    let kawaiistep = 'https://youtu.be/v0g1xzCpEOM';
-    let burninglove = 'https://youtu.be/1fhuTi4TGIQ';
-    const stream = (moosic === 'nqrse' ? nqrse : moosic === 'kawaiistep' ? kawaiistep : moosic === 'burninglove' ? burninglove : moosic);
+    const voiceChannel = msg.member.voiceChannel;
+    const nqrse = 'https://youtu.be/UNRUFN6Be2w';
+    const kawaiistep = 'https://youtu.be/v0g1xzCpEOM';
+    const burninglove = 'https://youtu.be/1fhuTi4TGIQ';
+    const stream = moosic === 'nqrse' ? nqrse : moosic === 'kawaiistep' ? kawaiistep : moosic === 'burninglove' ? burninglove : moosic;
+
     if (voiceChannel) {
-      await voiceChannel.join().then(connection => {
-        if (stream){
-          msg.say(`Playing: ${stream}`)
+      await voiceChannel.join().then((connection) => {
+        if (stream) {
+          msg.say(`Playing: ${stream}`);
           const dispatcher = connection.play(ytdl(stream));
+
           dispatcher.once('end', () => voiceChannel.leave());
         } else {
           msg.say('choose one of the following: nqrse, kawaiistep or burninglove');
         }
-      })
-      } else {
-        msg.say("you need to join a voice channel!");
+      });
+    } else {
+      msg.say('you need to join a voice channel!');
     }
   }
 };

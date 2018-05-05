@@ -58,7 +58,7 @@ module.exports = {
         "computed-property-spacing": "error",
         "consistent-return": "error",
         "consistent-this": "off",
-        "curly": "error",
+        "curly": "off",
         "default-case": "error",
         "dot-location": [
             "error",
@@ -107,7 +107,7 @@ module.exports = {
         "line-comment-position": "off",
         "linebreak-style": [
             "error",
-            "windows"
+            "unix"
         ],
         "lines-around-comment": "error",
         "lines-around-directive": "error",
@@ -218,7 +218,7 @@ module.exports = {
         "no-useless-constructor": "error",
         "no-useless-escape": "off",
         "no-useless-rename": "error",
-        "no-useless-return": "error",
+        "no-useless-return": "off",
         "no-var": "error",
         "no-void": "error",
         "no-warning-comments": "off",
