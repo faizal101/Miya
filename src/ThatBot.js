@@ -1,10 +1,11 @@
 const path = require('path');
-const config = require(path.join(__dirname, 'config.json'));
 const Commando = require('discord.js-commando');
 const sqlite = require('sqlite');
 
-const bot = new Commando.Client({
-  'commandPrefix': config.prefix,
+require('dotenv').config({path: path.join(__dirname, '.env')});
+
+const bot = new Client({
+  'commandPrefix': process.env.prefix,
   'unknownCommandResponse': false,
   'owner': '134309348632559616',
   'disableEveryone': true,
@@ -39,6 +40,6 @@ bot.on('ready', () => {
   bot.user.setActivity('kradness & reol', {'type': 'LISTENING'});
 });
 
-bot.login(config.token);
+bot.login(process.env.token);
 
 // TODO MTG command, music playback, avatar
