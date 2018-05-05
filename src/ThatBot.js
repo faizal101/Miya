@@ -1,19 +1,22 @@
+const Database = require('better-sqlite3');
+const {Client, SyncSQLiteProvider} = require('discord.js-commando');
 const path = require('path');
-const config = require(path.join(__dirname, 'config.json'));
-const Commando = require('discord.js-commando');
-const sqlite = require('sqlite');
 
-const bot = new Commando.Client({
-  'commandPrefix': config.prefix,
+require('dotenv').config({path: path.join(__dirname, '.env')});
+
+const bot = new Client({
+  'commandPrefix': process.env.prefix,
   'unknownCommandResponse': false,
   'owner': '134309348632559616',
   'disableEveryone': true,
   'selfbot': false
 });
 
+const db = new Database(path.join(__dirname, 'settings.sqlite3'));
+
 bot.setProvider(
-  sqlite.open(path.join(__dirname, 'settings.sqlite3')).then(db => new Commando.SQLiteProvider(db))
-).catch(console.error);
+  new SyncSQLiteProvider(db)
+);
 
 bot.registry
   .registerGroups([
@@ -39,6 +42,6 @@ bot.on('ready', () => {
   bot.user.setActivity('kradness & reol', {'type': 'LISTENING'});
 });
 
-bot.login(config.token);
+bot.login(process.env.token);
 
 // TODO MTG command, music playback, avatar

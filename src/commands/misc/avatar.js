@@ -1,5 +1,5 @@
 // module.exports.run =  (bot, msg, args) => {
-//     if (msg.content.startsWith(config.prefix + 'avatar')){
+//     if (msg.content.startsWith(process.env.prefix + 'avatar')){
 //       msg.channel.send(msg.author.avatarURL);
 //     }
 // };
