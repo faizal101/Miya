@@ -18,6 +18,7 @@
         "discord.js-commando": "faizal101/Commando#thatbot",
         "dotenv": "^5.0.1",
         "erlpack": "discordapp/erlpack",
+        "libsodium-wrappers": "^0.7.3",
         "node-opus": "^0.2.7",
         "path": "^0.12.7",
         "uws": "^9.148.0",
