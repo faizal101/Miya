@@ -11,7 +11,7 @@
     "author": "kuuhaku",
     "license": "MIT",
     "dependencies": {
-        "better-sqlite3": "~4.0.2",
+        "better-sqlite3": "4.0.0",
         "common-tags": "^1.7.2",
         "danbooru": "^3.0.7",
         "discord.js": "Favna/discord.js#main",
