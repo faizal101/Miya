@@ -13,12 +13,12 @@ module.exports = class YayCommand extends Command {
   }
 
   run (msg) {
-    const yay = Math.floor(Math.random() * 26) + 1;
+    const yay = Math.floor(Math.random() * 26);
 
     msg.channel.send({
       files: [
         {
-          attachment: `${path.join(__dirname, '../../../images/yay/')}${yay}.png`,
+          attachment: `${path.join(__dirname, '../../../images/yay/60322965_')}${yay}.png`,
           name: `${yay}.png`
         }
       ]
