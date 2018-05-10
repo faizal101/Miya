@@ -17,7 +17,7 @@ module.exports = class donateCommand extends Command {
     const embed = new MessageEmbed();
 
     embed
-      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL())
+      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({format: 'png'}))
       .setColor('#ec40df')
       .setTimestamp()
       // .setFooter(`Owner: ${this.client.owners[0].tag}`)

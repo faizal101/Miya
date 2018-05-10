@@ -18,9 +18,9 @@ module.exports = class StatsCommand extends Command {
     const embed = new MessageEmbed();
 
     embed
-      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL())
+      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({format: 'png'}))
       .setColor('#ec40df')
-      .setFooter(`Requested by: ${msg.author.tag}`, msg.author.displayAvatarURL())
+      .setFooter(`Requested by: ${msg.author.tag}`, msg.author.displayAvatarURL({format: 'png'}))
       .setTimestamp()
       .addField('Info', stripIndents`This bot is in ${this.client.guilds.size} guilds
       Coded in discord.js

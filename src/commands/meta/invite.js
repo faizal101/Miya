@@ -17,7 +17,7 @@ module.exports = class InviteCommand extends Command {
     const embed = new MessageEmbed();
 
     embed
-      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL())
+      .setAuthor(this.client.user.tag, this.client.user.displayAvatarURL({format: 'png'}))
       .setColor('#ec40df')
       .addField('Invite Link:', '[Invite me to your server!](https://discordapp.com/api/oauth2/authorize?client_id=284399078165708802&permissions=1141230657&scope=bot)');
     

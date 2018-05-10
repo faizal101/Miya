@@ -42,7 +42,7 @@ module.exports = class DanCommand extends Command {
         .addField('Rating:', post.rating === 's' ? 'safe' : post.score === 'q' ? 'questionable' : 'explicit', true)
         .addField('Artist:', `[${post.tag_string_artist}](https://danbooru.donmai.us/posts/?tags=${post.tag_string_artist})`, true)
         .addField('File Fromat:', post.file_ext, true)
-        .setFooter(`Post ID: ${post.id}`, this.client.user.displayAvatarURL());
+        .setFooter(`Post ID: ${post.id}`, this.client.user.displayAvatarURL({format: 'png'}));
       
       return msg.embed(embed);
     } catch (id) {
