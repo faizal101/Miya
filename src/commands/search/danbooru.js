@@ -22,10 +22,14 @@ module.exports = class DanCommand extends Command {
   }
 
   async run (msg, {search}) {
+    if (!msg.channel.nsfw && (search.includes('ing:q') || search.includes('ing:e') || search.includes('-rating:s'))) {
+      return msg.say('This channel is not NSFW. Use the `rating:q`, `rating:e` or `-rating:s` tags in a NSFW channel.');
+    }
+
     const embed = new MessageEmbed();
     const booru = new Danbooru();
     const posts = await booru.posts({
-      tags: search,
+      tags: `${search} ${!msg.channel.nsfw && !search.includes('ing:s') ? 'rating:s' : ''}`,
       limit: 5,
       random: true
     });
@@ -39,14 +43,14 @@ module.exports = class DanCommand extends Command {
         .setURL(`https://danbooru.donmai.us/posts/${post.id}`)
         .setImage(post.large_file_url)
         .addField('Score:', post.score, true)
-        .addField('Rating:', post.rating === 's' ? 'safe' : post.score === 'q' ? 'questionable' : 'explicit', true)
+        .addField('Rating:', post.rating === 's' ? 'safe' : post.rating === 'q' ? 'questionable' : 'explicit', true)
         .addField('Artist:', `[${post.tag_string_artist}](https://danbooru.donmai.us/posts/?tags=${post.tag_string_artist})`, true)
         .addField('File Fromat:', post.file_ext, true)
         .setFooter(`Post ID: ${post.id}`, this.client.user.displayAvatarURL({format: 'png'}));
-      
+        
       return msg.embed(embed);
     } catch (id) {
-      msg.say('Danbooru only allows you to search with a maximum of two tags. Consider donating if you want to use more than two tags.');
+      return msg.say('Danbooru only allows you to search with a maximum of two tags. Consider donating if you want to use more than two tags.');
     }
   }
 };
