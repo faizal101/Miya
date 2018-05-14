@@ -42,6 +42,8 @@ bot.on('ready', () => {
   bot.user.setActivity('kradness & reol', {'type': 'LISTENING'});
 });
 
+bot.on('error', console.error);
+
 bot.login(process.env.token);
 
 // TODO MTG command, music playback, avatar
