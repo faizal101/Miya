@@ -3,11 +3,11 @@ const {Command} = require('discord.js-commando');
 module.exports = class SayCommand extends Command {
   constructor (client) {
     super(client, {
-      name: 'say',
+      name: 'sayd',
       group: 'misc',
-      memberName: 'say',
-      description: 'I say what you\'ll say',
-      examples: ['say hey!'],
+      memberName: 'sayd',
+      description: 'Like say, but your message gets deleted afterwards (provided I have the permissions).',
+      examples: ['sayd hey!'],
       args: [
         {
           key: 'text',
@@ -19,6 +19,10 @@ module.exports = class SayCommand extends Command {
   }
 
   run (msg, {text}) {
+    if (msg.deletable) {
+      msg.delete();
+    }
+
     return msg.say(text);
   }
 };
