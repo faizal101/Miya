@@ -49,7 +49,7 @@ module.exports = class SafebooruCommand extends Command {
         
         return msg.embed(embed);
       } catch (id) {
-        msg.say('Danbooru only allows you to search with a maximum of two tags. Consider donating if you want to use more than two tags.');
+        return msg.say(search.split(' ').length <= 2 ? 'No Results Found.' : 'Danbooru only allows you to search with a maximum of two tags. Consider donating if you want to use more than two tags.');
       }
     }
   }
