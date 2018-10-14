@@ -5,10 +5,11 @@ module.exports = class avatarCommand extends Command {
   constructor (client) {
     super(client, {
       name: 'avatar',
+      aliases: ['ava', 'pfp'],
       group: 'misc',
       memberName: 'avatar',
       description: 'Get the avatar pic of a user in the server',
-      examples: ['avatar'],
+      examples: ['avatar B12'],
       args: [
         {
           key: 'member',
@@ -43,8 +44,6 @@ module.exports = class avatarCommand extends Command {
       .setTitle('Click here to view in your browser')
       .setURL(ava)
       .setImage(ava);
-        
-    console.log(ava);
 
     return msg.embed(embed);
   }
