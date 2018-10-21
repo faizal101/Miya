@@ -26,8 +26,10 @@ module.exports = class DanCommand extends Command {
       return msg.say('This channel is not NSFW. Use the `rating:q`, `rating:e` or `-rating:s` tags in a NSFW channel.');
     }
 
+    const login = process.env.dbLogin;
+    const key = process.env.dbKey;
+    const booru = new Danbooru(`${login}:${key}`);
     const embed = new MessageEmbed();
-    const booru = new Danbooru();
     const posts = await booru.posts({
       tags: `${search} ${!msg.channel.nsfw && !search.includes('ing:s') ? 'rating:s' : ''}`,
       limit: 5,
@@ -50,7 +52,7 @@ module.exports = class DanCommand extends Command {
         
       return msg.embed(embed);
     } catch (id) {
-      return msg.say(search.split(' ').length <= 2 ? 'No Results Found.' : 'Danbooru only allows you to search with a maximum of two tags. Consider donating if you want to use more than two tags.');
+      return msg.say(search.split(' ').length <= 6 ? 'No Results Found.' : 'Danbooru Gold only allows you to search with a maximum of six tags. Consider donating if you want to use more than six tags.');
     }
   }
 };
