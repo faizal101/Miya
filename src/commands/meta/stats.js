@@ -25,7 +25,7 @@ module.exports = class StatsCommand extends Command {
       .addField('Info', stripIndents`This bot is in ${this.client.guilds.size} guilds
       Coded in discord.js
       A bot made for fun by ${this.client.owners[0].tag}`)
-      .addField('GitHub', 'Check out my code on [GitHub!](https://github.com/faizal101/ThatBotJS)');
+      .addField('GitHub', 'Check out my code on [GitHub!](https://github.com/faizal101/Miya)');
 
     return msg.embed(embed);
   }

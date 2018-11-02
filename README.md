@@ -1,7 +1,7 @@
-# ThatBotJS
-[![license](https://img.shields.io/github/license/faizal101/ThatBotJS.svg?style=for-the-badge)](https://github.com/faizal101/ThatBotJS/blob/master/LICENSE.md)
+# Miya
+[![license](https://img.shields.io/github/license/faizal101/Miya.svg?style=for-the-badge)](https://github.com/faizal101/Miya/blob/master/LICENSE.md)
 
-It's ThatBot, but written in JavaScript!
+Miya, Currently a WIP Discord bot~
 
 A personal Discord bot built using discord.js
 
