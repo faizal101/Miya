@@ -24,7 +24,8 @@ bot.registry
     ['random'],
     ['meta'],
     ['search'],
-    ['music']
+    ['music'],
+    ['special']
   ])
   .registerDefaultGroups()
   .registerDefaultTypes()
